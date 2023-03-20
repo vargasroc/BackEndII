@@ -25,6 +25,18 @@ app:
 spring:
   application:
     name: users-service
+  security:
+    oauth2:
+      client:
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8083/realms/DigitalMedia
+        registration:
+          keycloak:
+            client-id: microservicios
+            client-secret: xGyIx19WJdg1nyKc9Cyy8Ybg0oSGL2br
+            scope: openid
+            redirect_uri: http://localhost:8085
   data:
     mongodb:
       host: localhost
@@ -35,3 +47,10 @@ spring:
       database: moviesdb
   main:
     allow-circular-references: true
+
+dm:
+  keycloak:
+    realm: DigitalMedia
+    serverUrl: http://localhost:8083/
+    clientId: microservicios
+    clientSecret: xGyIx19WJdg1nyKc9Cyy8Ybg0oSGL2br

@@ -1,0 +1,15 @@
+C:\Users\SL\Desktop\BackEndII\TrabajoFinalBEII\movies-api\src\main\java\com\digitalmedia\movies\model\dto\AddCommentRequest.java
+C:\Users\SL\Desktop\BackEndII\TrabajoFinalBEII\movies-api\src\main\java\com\digitalmedia\movies\controller\AccountController.java
+C:\Users\SL\Desktop\BackEndII\TrabajoFinalBEII\movies-api\src\main\java\com\digitalmedia\movies\service\MovieService.java
+C:\Users\SL\Desktop\BackEndII\TrabajoFinalBEII\movies-api\src\main\java\com\digitalmedia\movies\service\MovieServiceImpl.java
+C:\Users\SL\Desktop\BackEndII\TrabajoFinalBEII\movies-api\src\main\java\com\digitalmedia\movies\controller\MoviesController.java
+C:\Users\SL\Desktop\BackEndII\TrabajoFinalBEII\movies-api\src\main\java\com\digitalmedia\movies\MoviesApiApplication.java
+C:\Users\SL\Desktop\BackEndII\TrabajoFinalBEII\movies-api\src\main\java\com\digitalmedia\movies\config\SwaggerConfig.java
+C:\Users\SL\Desktop\BackEndII\TrabajoFinalBEII\movies-api\src\main\java\com\digitalmedia\movies\model\dto\UpdateMovieRequest.java
+C:\Users\SL\Desktop\BackEndII\TrabajoFinalBEII\movies-api\src\main\java\com\digitalmedia\movies\exception\MovieNotFoundException.java
+C:\Users\SL\Desktop\BackEndII\TrabajoFinalBEII\movies-api\src\main\java\com\digitalmedia\movies\model\dto\CreateMovieRequest.java
+C:\Users\SL\Desktop\BackEndII\TrabajoFinalBEII\movies-api\src\main\java\com\digitalmedia\movies\model\Movie.java
+C:\Users\SL\Desktop\BackEndII\TrabajoFinalBEII\movies-api\src\main\java\com\digitalmedia\movies\config\ErrorAttributesConfig.java
+C:\Users\SL\Desktop\BackEndII\TrabajoFinalBEII\movies-api\src\main\java\com\digitalmedia\movies\mapper\MovieMapper.java
+C:\Users\SL\Desktop\BackEndII\TrabajoFinalBEII\movies-api\src\main\java\com\digitalmedia\movies\model\dto\MovieDto.java
+C:\Users\SL\Desktop\BackEndII\TrabajoFinalBEII\movies-api\src\main\java\com\digitalmedia\movies\repository\MovieRepository.java

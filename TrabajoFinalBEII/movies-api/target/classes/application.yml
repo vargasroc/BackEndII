@@ -1,6 +1,21 @@
+server:
+  port: 8085
+
 spring:
   application:
-    name: movies-api
+    name: movies-service
+  security:
+    oauth2:
+      client:
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8083/realms/DigitalMedia
+        registration:
+          keycloak:
+            cliente-id: microservicios
+            client-secret: xGyIx19WJdg1nyKc9Cyy8Ybg0oSGL2br
+            scope: openid
+            redirect-uri: http://localhost:8085/login/oauth/code/keycloak
   data:
     mongodb:
       uri: mongodb://localhost:27017/moviesdb
@@ -24,8 +39,7 @@ springdoc:
   swagger-ui:
     groups-order: DESC
     disable-swagger-default-url: true
-server:
-  port: 8085
+
 
 eureka:
   client:

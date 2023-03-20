@@ -1,36 +1,37 @@
 package com.digitalmedia.users.controller;
 
 import com.digitalmedia.users.model.User;
-import com.digitalmedia.users.model.dto.UserRequest;
-import com.digitalmedia.users.service.IUserService;
-import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.*;
-import javax.validation.Valid;
-import java.security.Principal;
-import java.util.Optional;
 
-@RequiredArgsConstructor
+import com.digitalmedia.users.model.dto.UserDTO;
+import com.digitalmedia.users.service.UserService;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
 @RestController
 @RequestMapping("/users")
 public class UserController {
-  private final IUserService userService;
- //TODO  estos dos endpoints funcionaran cuando este configurada la seguridad en el proyecto
+  private UserService userService;
 
-  /*@GetMapping("/me")
-  public User getUserExtra(Principal principal) {
-    return userService.validateAndGetUserExtra(principal.getName());
-  }*/
-
-  @GetMapping("/me")
-  public User getUserExtra(@RequestParam String principal) {
-    return userService.validateAndGetUserExtra(principal);
+  public UserController(UserService userService) {
+    this.userService = userService;
   }
 
-  @PostMapping("/me")
-  public User saveUserExtra(@Valid @RequestBody UserRequest updateUserRequest, @RequestParam(value = "principal") String principal) {
-    Optional<User> userOptional = userService.getUserExtra(principal);
-    User userExtra = userOptional.orElseGet(() -> new User(principal));
-    userExtra.setAvatar(updateUserRequest.getAvatar());
-    return userService.saveUserExtra(userExtra);
+  @GetMapping("/admin")
+  @PreAuthorize("hasAuthority('GROUP_admin')")
+  public List<UserDTO> getUsersNoAdmin() {
+    return userService.findNoAdmin();
+  }
+
+  @GetMapping("/admin/find/{username}")
+  @PreAuthorize("hasAuthority('GROUP_admin')")
+  public User getUserByUsernameAdmin(@PathVariable("username") String username) {
+    return userService.findByUsername(username);
+  }
+
+  @GetMapping("/find/{username}")
+  public User getUserByUsername(@PathVariable("username") String username) {
+    return userService.findByUsername(username);
   }
 }

@@ -1,6 +1,6 @@
 package com.digitalmedia.users.repository;
 
-import com.digitalmedia.users.exceptions.UserExtraNotFoundException;
+
 import com.digitalmedia.users.model.User;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Repository;

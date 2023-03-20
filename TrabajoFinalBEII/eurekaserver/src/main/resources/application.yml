@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: eurekaserver
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8888
+
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+
+management:
+  info:
+    env:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    info:
+      enabled: true
+
+info:
+  app:
+    name: ${spring.application.name}
+    description: Eureka Server Proyecto Integrador Materia Especialización Backend II
+    version: 1.0.0
